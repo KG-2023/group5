@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-image-nav{
+    max-width: 2rem;
+    max-height: 2rem;
+}
