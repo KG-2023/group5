@@ -1,10 +1,89 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+
+/* body{
+    background-color: rgba(143, 143, 216, 0.5);
+} */
+
+.super-container{
+    background-color: rgb(127, 127, 240);
+}
+
+.main-nav{
+    top: 0;
+    width: 100%;
+    background-color: rgb(127, 127, 240);
+    z-index: 1000;
+
 }
 
 .logo-image-nav{
-    max-width: 2rem;
-    max-height: 2rem;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
 }
+
+/* .main-container-color{
+    background-color: rgba(12, 12, 192, 0.5);
+} */
+
+.div-nav-control ul li a{
+    color: white;
+}
+
+.list-group-item {
+    padding: 0; /* Remove the default padding */
+  }
+
+  .main-container{
+    background-color: rgb(127, 127, 240);
+    margin-top: 65px;   
+    padding: 20px;
+  } 
+ 
+
+.section-modify{
+    background-color: rgb(127, 127, 240);
+    display: flex;
+    flex-direction: column;
+}
+
+.section-modify .content{
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.nav-pills .nav-item .nav-link.active {
+    background-color: transparent !important;
+}
+
+/* Hover effect */
+.nav-pills .nav-item .nav-link:hover {
+    background-color: #12263a; /* Change to the desired hover background color */
+    color: white;
+}
+  
+  /* Active (clicked) effect */
+  .nav-pills .nav-item .nav-link.active {
+    background-color: transparent;
+    color: white; /* Change to the desired active text color */
+  }
+
+.section-modify ul li a{
+    color: white;
+}
+
+.fixed-list-item {
+    position: fixed;
+    top: 50px; /* Adjust this value based on your design and positioning */
+    right: 20px; /* Adjust this value based on your design and positioning */
+    background-color: #f8f9fa; /* Background color for the fixed item */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  /* Style for the rest of the content */
+  .content {
+    margin-top: 70px; /* Adjust this value based on the height of your navbar */
+    padding: 20px;
+  }
