@@ -4,9 +4,9 @@
     background-color: rgba(143, 143, 216, 0.5);
 } */
 
-.super-container{
-    background-color: rgb(127, 127, 240);
-}
+/* .super-container{
+    background-color: rgb(83, 95, 128);
+} */
 
 .main-nav{
     top: 0;
@@ -35,20 +35,34 @@
 
   .main-container{
     background-color: rgb(127, 127, 240);
-    margin-top: 65px;   
-    padding: 20px;
+    margin-top: 4.1em;
+    
   } 
- 
+
+
 
 .section-modify{
-    background-color: rgb(127, 127, 240);
+    /* background-color: rgb(127, 127, 240); */
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.section-modify ul li{
+    color: #030e1a;
+}
+
+.section-modify .section-1st-div{
+    background-color: #030e1a;
 }
 
 .section-modify .content{
     flex-grow: 1;
     overflow-y: auto;
+}
+
+.sec-nav-modify{
+    color: white;
 }
 
 .nav-pills .nav-item .nav-link.active {
