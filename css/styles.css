@@ -1,29 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 8px;
+}
 
-
-/* body{
-    background-color: rgba(143, 143, 216, 0.5);
-} */
-
-/* .super-container{
-    background-color: rgb(83, 95, 128);
-} */
-
-.main-nav{
+.main-nav {
     top: 0;
-    width: 100%;
-    background-color: rgb(127, 127, 240);
-    z-index: 1000;
+    width: 100%;  
+    background-color: #7f7ff0;
+}
 
+.font-design-nav{
+    font-size: 2rem;    
 }
 
 .logo-image-nav{
-    max-width: 2.5rem;
-    max-height: 2.5rem;
+    max-width: 4rem;
+    max-height: 4rem;
 }
 
-/* .main-container-color{
-    background-color: rgba(12, 12, 192, 0.5);
-} */
+.shadow {
+box-shadow: 0px 1px 1px 0px #a1a0a0;  
+}
 
 .div-nav-control ul li a{
     color: white;
@@ -34,88 +33,106 @@
   }
 
   .main-container{
-    background-color: rgb(127, 127, 240);
-    margin-top: 7.5em;
-    
-  } 
-
-  .fixed-column {
-    position: fixed;
-    top: 30; /*Position the fixed row at the top */
-    width: 100%; /* Take full width of the viewport */
-    background-color: #fff; /* Optional: Set a background color */
-    z-index: 1; /* Optional: Set a z-index to control stacking */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for visual separation */
-    padding: 10px; /* Optional: Add padding for spacing */
-}
-
-/* Adjust the margin of the next element to account for the fixed row */
-.col-3 {
-    margin-top: 50px; /* Adjust this value based on your design */
-}
-  
-
-
-
-.section-modify{
-    /* background-color: rgb(127, 127, 240); */
-    display: flex;
-    flex-direction: column;
     width: 100%;
+    height: 6rem;
+    background-color: #7f7ff0;
+    margin-top: 10rem;
+    padding-top: 2rem;
+
+ } 
+
+ /* .main-container-row{
+    background-color: #b9b9d1;
+ } */
+
+ .main-container-col{
+    /* background-color: #7f7ff0; */
+ } 
+
+ .main-container div{
+    color: #f8f9fa;
+    text-align: center;
+    /* padding-left: 4rem; */
+ }
+
+ .font-design-nav{
+    background-color: #7f7ff0;
+ }
+
+ 
+ .font-design-nav a{
+    font-size: 2rem;   
+    text-decoration: none; 
+    color: #fff;
 }
 
-.section-modify ul li{
-    color: #030e1a;
+.main-container-div:hover{
+    border-bottom-style: solid;   
+    border-width: 1.5rem; 
+    border-color: rgb(162, 168, 245);
+    border-bottom-style: outset;
 }
 
-.section-modify .section-1st-div{
-    background-color: #030e1a;
+.font-design-nav a:hover{
+    color: #fff;
 }
 
-.section-modify .content{
-    flex-grow: 1;
-    overflow-y: auto;
+.section-div{
+ background-color: #7f7ff0;
 }
 
-.sec-nav-modify{
-    color: white;
-}
+ 
 
-.nav-pills .nav-item .nav-link.active {
-    background-color: transparent !important;
-}
+  /* Google Search API  */
 
-/* Hover effect */
-.nav-pills .nav-item .nav-link:hover {
-    background-color: #12263a; /* Change to the desired hover background color */
-    color: white;
-}
-  
-  /* Active (clicked) effect */
-  .nav-pills .nav-item .nav-link.active {
-    background-color: transparent;
-    color: white; /* Change to the desired active text color */
+  /* Customize the search box */
+
+  .gsc-control-cse {
+    background-color: #7f7ff0;
   }
 
-.section-modify ul li a{
-    color: white;
+.gsc-search-box {
+    border: 0;
+    padding: 0px;
+    margin:0;
+  
 }
 
-.fixed-list-item {
-    position: fixed;
-    top: 50px; /* Adjust this value based on your design and positioning */
-    right: 20px; /* Adjust this value based on your design and positioning */
-    background-color: #f8f9fa; /* Background color for the fixed item */
-    padding: 10px;
-    border: 1px solid #ccc;
+/* Customize the search input */
+.gsc-input {
+    border: none;
+    padding: 0;
+    width: 200px;
+}
+
+/* Customize the search button */
+.gsc-search-button {
+    background-color: #ffffff;
+    color: #7f7ff0;
+    border: none;
+    padding: 5px 10px;
     border-radius: 5px;
-    z-index: 1000; /* Ensure it's above other content */
-  }
+    cursor: pointer;
+}
 
-  /* Style for the rest of the content */
-  .content {
-    margin-top: 70px; /* Adjust this value based on the height of your navbar */
-    padding: 20px;
-  }
+/* Customize search result styles */
+.gsc-webResult {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
 
-  
+.gsc-result-info {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.gsc-result-url {
+    color: #007bff;
+}
+
+.gsc-thumbnail-inside {
+    display: none; /* Hide thumbnails */
+}
+
+
+ 
