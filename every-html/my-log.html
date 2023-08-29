@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/new-log.css">
     
-    <link rel="icon" type="image/x-icon" href="img/travel-journal.webp">
+    <link rel="icon" type="image/x-icon" href="/images/travel-journal.webp">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
   <!-- Add the Programmable Search Engine script -->
   <script async src="https://cse.google.com/cse.js?cx=b2570300b5d894840"></script>
 
-  <title>My Journal</title>
+  <title>New Log</title>
 
 </head>
 <body> 
@@ -26,7 +26,7 @@
 
         <div class="container-fluid px-4 shadow">
           
-          <a class="navbar-brand" href="javascript:void(0)"><img class="logo-image-nav" src="images/travel-journal.png" alt="Logo image"></a>
+          <a class="navbar-brand" href="javascript:void(0)"><img class="logo-image-nav" src="/images/travel-journal.webp" alt="Logo image"></a>
 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -89,18 +89,16 @@
 
       <div class="container-fluid main-container">
               <div class="row align-items-start main-container-row">
-
                   <div class="col-4 main-container-col">
-                      <h2>Welcome <span id="result"></span>>!</h2>
+                      <h2>Left Corner</h2>
                   </div>
-
                   <div class="col-4 main-container-col">
                       <div class="row">
                           <div class="col font-design-main main-container-div">
                               <a href="">My Logs</a>
                           </div>
                           <div class="col font-design-main main-container-div">
-                              <a href="every-html/new-log.html">New log</a>
+                              <a href="/every-html/new-log.html">New log</a>
                           </div>
                           <div class="col font-design-main main-container-div">
                               <a href="">Group</a>
@@ -115,44 +113,35 @@
                     </a></h3>
                   </div>
               </div>
-      </div>
+        </div>
   
-    </div>
+        <!-- </div> -->
 
 
-    <div class="container-fluid section-div">
-      <div class="row">
-        <div class="col-4 pt-4" style="background-color: #8585fc;">
+        <div class="container-fluid section-div">
+        <div class="row">
+            <div class="col-4 pt-4" style="background-color: #fcdc85;">
+            </div>
+
+            <div class="col-4 main-section">
+                <article class="regular">
+                    <h2>My Logs</h2>
+                    <h2>Welcome <span id="result"></span>>!</h2>
+
+                    <script>
+                        document.getElementById('result').innerHTML = localStorage.getItem('textValue');
+                      </script>
+
+                    <p class="output" id="output1"></p>
+                </article>
+
+            </div>        
+
+            <div class="col-4 pt-4" style="background-color: #85b5fc;" ></div>
         </div>
-
-
-
-        <div class="col-4 main-section">
-          <div class="card">
-            <div class="card-body card img-fluid" style="width:100%; background-color: #8585fc;">
-              <div id="output"></div>
-              <p id="copyright"></p>
-            </div>    
-          </div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-
-        </div>
-
-
-        
-
-        <div class="col-4 pt-4" style="background-color: #8585fc;" ></div>
-      </div>
-    </div>        
-                                    
-    
+        </div>        
+                                        
+    </div>  
         
   </div>
   
@@ -160,7 +149,23 @@
   </script>
     <script src="script.js"></script>
     <script src="/scriptFile/nyapi.js"></script>
-    
+    <script>
+        const txt1 = document.getElementById('tbuser');
+        const btn1 = document.getElementById('btn1');
+        const out1 = document.getElementById('output1');
+
+        function fun1(){
+            out1.innerHTML = txt1.value;
+        }
+
+        function passValue(){
+            var text = document.getElementById('txt').value;
+            localStorage.setItem('textValue', text);
+            return false;
+        }
+
+        btn1.addEventListener('click', fun1);
+    </script>
       
     
 </body>
