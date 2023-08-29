@@ -5,14 +5,36 @@
     font-size: 8px;
 }
 
+/* .super-container{
+     position: relative; 
+} */
+
 .main-nav {
     top: 0;
     width: 100%;  
     background-color: #7f7ff0;
 }
 
+.nav-item{
+    background-color: #7f7ff0;  
+    text-decoration: none;
+    text-shadow: none;
+}
 .font-design-nav{
-    font-size: 2rem;    
+    font-size: 2rem;  
+    background-color: #7f7ff0;  
+    
+}
+
+/* .font-design-nav a{
+    font-size: 2rem;   
+    text-decoration: none; 
+    color: #fff;
+} */
+
+.nav-item .nav-link:hover{
+    color: #fff;
+    background-color: #8585fc;
 }
 
 .logo-image-nav{
@@ -32,63 +54,90 @@ box-shadow: 0px 1px 1px 0px #a1a0a0;
     padding: 0; /* Remove the default padding */
   }
 
+
+
   .main-container{
     width: 100%;
     height: 6rem;
-    background-color: #7f7ff0;
-    margin-top: 10rem;
-    padding-top: 2rem;
-
+    background-color: #8585fc;
+    margin-top: 0;
+    padding-top: 1rem;
+    /* position: absolute; */
  } 
 
- /* .main-container-row{
-    background-color: #b9b9d1;
- } */
+ .main-container-row{   
+    justify-content: center;
+}
+
+.font-design-main a{
+    font-size: 2rem;   
+    color: #fff; 
+    text-decoration: none;
+}
 
  .main-container-col{
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #ddd; */
     /* background-color: #7f7ff0; */
  } 
 
  .main-container div{
+
     color: #f8f9fa;
     text-align: center;
-    /* padding-left: 4rem; */
- }
-
- .font-design-nav{
-    background-color: #7f7ff0;
  }
 
  
- .font-design-nav a{
-    font-size: 2rem;   
-    text-decoration: none; 
-    color: #fff;
-}
+
 
 .main-container-div:hover{
     border-bottom-style: solid;   
-    border-width: 1.5rem; 
-    border-color: rgb(162, 168, 245);
+    border-width: 1rem; 
+    border-color: #acb0f3;
     border-bottom-style: outset;
+    background-color: transparent;
 }
 
-.font-design-nav a:hover{
+.main-container-div a:hover{
     color: #fff;
+    
 }
+
+
+
+
+
+/* Main Section */
 
 .section-div{
- background-color: #7f7ff0;
+    /* display: none; */
+    margin-top: 9rem;
+    padding-top: 6.6rem;
+    background-color: #8585fc;
 }
 
- 
+
+.main-section{
+    background-color: #8585fc;
+    padding-top: 1rem;
+}
+
+#output{
+    font-size: 2rem;
+    padding-top: 4rem;
+}
+
+#copyright{
+    font-size: 2rem;
+}
 
   /* Google Search API  */
 
   /* Customize the search box */
 
   .gsc-control-cse {
-    background-color: #7f7ff0;
+    background-color: #8585fc;
   }
 
 .gsc-search-box {
@@ -127,7 +176,7 @@ box-shadow: 0px 1px 1px 0px #a1a0a0;
 }
 
 .gsc-result-url {
-    color: #007bff;
+    color: #7f7ff0;
 }
 
 .gsc-thumbnail-inside {
