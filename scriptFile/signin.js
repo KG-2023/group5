@@ -9,7 +9,7 @@ signInButton.addEventListener('click', async function () {
 
     if (storedUser && signInEmail.value === storedUser.email && signInPassword.value === storedUser.password) {
         // Successful sign-in, redirect to index.html
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     } else {
         alert('Invalid credentials. Please try again.');
     }

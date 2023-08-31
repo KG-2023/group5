@@ -1,0 +1,53 @@
+
+//https://newsapi.org/v2/top-headlines?country=ph&apiKey=d406f5098f6e4663acd729fd42eea9e4
+
+async function getNews() {
+    try {
+        const response = await fetch('https://newsapi.org/v2/top-headlines?country=ph&apiKey=d406f5098f6e4663acd729fd42eea9e4');
+        const data = await response.json();
+        const newsArticles = data.articles;
+        const output = document.getElementById('output');
+        
+        let currentIndex = 0;
+
+        function renderNextArticle() {
+            if (currentIndex < newsArticles.length) {
+                const article = newsArticles[currentIndex];
+                try {
+                    const articleImage = article.urlToImage ? article.urlToImage : 'placeholder-image-url.jpg';
+
+                    output.innerHTML += `
+                        <a href="${article.url}" target="_blank" class="news-link">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="${articleImage}" class="card-img-top" alt="${article.title}" title="${article.title}"><br>
+                                    <h2 class="card-title">${article.title}</h2>
+                                    <div class="card-text">
+                                        <p>${article.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <br>
+                    `;
+                } catch (err) {
+                    console.log(err);
+                }
+
+                currentIndex++;
+                setTimeout(renderNextArticle, 10000); // 30000 milliseconds = 30 seconds
+            } else {
+                output.classList.add('news-container');
+                output.innerHTML += `<div class="clearfix"></div>`;
+                output.innerHTML += `<br><br><br><br>`;
+                output.innerHTML += `<div class="card-footer text-center"><p>Source: The New York Times</p></div>`;
+            }
+        }
+
+        renderNextArticle(); // Start rendering news
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+getNews();
