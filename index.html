@@ -21,8 +21,10 @@
   <div class="super-container">
 
 
+
+
     <div class="align fixed-top">
-      <nav class="navbar navbar-expand-sm border-1 main-nav">
+      <nav class="navbar navbar-expand-sm border-1 main-nav color">
 
         <div class="container-fluid px-4 shadow">
           
@@ -34,16 +36,16 @@
 
               <div class="collapse navbar-collapse div-nav-control" id="mynavbar">
                 <ul class="navbar-nav me-auto">
-                  <li class="nav-item">
-                      <a class="nav-link dropdown-toggle ps-4 font-design-nav" data-bs-toggle="dropdown" href="javascript:void(0)" role="button">Account</a>
+                  <li class="nav-item dropdown color">
+                      <a class="nav-link dropdown-toggle ps-4 font-design-nav color" data-bs-toggle="dropdown" href="javascript:void(0)" role="button">Account</a>
                       <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Sign In</a></li>
                         <li><a class="dropdown-item" href="#">Link 2</a></li>
                         <li><a class="dropdown-item" href="#">Link 3</a></li>
                       </ul>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link dropdown-toggle ps-4 font-design-nav" data-bs-toggle="dropdown" href="javascript:void(0)" role="button" aria-expanded="false">Notification</a>
+                  <li class="nav-item dropdown color">
+                    <a class="nav-link dropdown-toggle ps-4 font-design-nav color" data-bs-toggle="dropdown" href="javascript:void(0)" role="button" aria-expanded="false">Notification</a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">Action</a></li>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -52,18 +54,23 @@
                       <li><a class="dropdown-item" href="#">Separated link</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link dropdown-toggle ps-4 font-design-nav" data-bs-toggle="dropdown" href="javascript:void(0)" role="button" aria-expanded="false">Profile</a>
+                  <li class="nav-item dropdown color">
+                    <a class="nav-link dropdown-toggle ps-4 font-design-nav color" data-bs-toggle="dropdown" href="javascript:void(0)" role="button" aria-expanded="false">Profile</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
+    <li>
+        <a class="dropdown-item" href="#">
+            <button onclick="changeElementBackgroundColorByClass('color')">Change Background</button>
+        </a>
+    </li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+</ul>
+
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle ps-4 font-design-nav" data-bs-toggle="dropdown" href="javascript:void(0)" role="button" aria-expanded="false">Utilities</a>
+                  <li class="nav-item dropdown color">
+                    <a class="nav-link dropdown-toggle ps-4 font-design-nav color" data-bs-toggle="dropdown" href="javascript:void(0)" role="button" aria-expanded="false">Utilities</a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">Action</a></li>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -87,17 +94,18 @@
       </nav>
 
 
-      <div class="container-fluid main-container">
+      <div class="container-fluid main-container color">
               <div class="row align-items-start main-container-row">
 
                   <div class="col-4 main-container-col">
-                      <h2>Welcome <span id="result"></span>>!</h2>
+                      <h2>Welcome <span id="result"></span>!</h2>
+
                   </div>
 
                   <div class="col-4 main-container-col">
                       <div class="row">
                           <div class="col font-design-main main-container-div">
-                              <a href="">My Logs</a>
+                              <a href="index.html">My Journal</a>
                           </div>
                           <div class="col font-design-main main-container-div">
                               <a href="every-html/new-log.html">New log</a>
@@ -127,27 +135,15 @@
 
 
 
-        <div class="col-4 main-section">
+        <div class="col-4 main-section color">
           <div class="card">
             <div class="card-body card img-fluid" style="width:100%; background-color: #8585fc;">
               <div id="output"></div>
               <p id="copyright"></p>
             </div>    
-          </div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-          <div class="comments">comments here</div>
-
-        </div>
-
-
+          </div>  
+        </div>  
         
-
         <div class="col-4 pt-4" style="background-color: #8585fc;" ></div>
       </div>
     </div>        
@@ -156,12 +152,26 @@
         
   </div>
   
-  <script async src="https://cse.google.com/cse.js?cx=b2570300b5d894840">
-  </script>
-    <script src="script.js"></script>
+
+    <!-- <script src="/scriptFile/script.js"></script> -->
     <script src="/scriptFile/nyapi.js"></script>
-    <script src="/scriptFile/philnews-api"></script>
-    
+    <script src="/scriptFile/philnews-api.js"></script>
+    <script src="/scriptFile/new-log.js"></script>
+    <script src="/scriptFile/background-color.js"></script>
+    <script>
+      // JavaScript code to parse query parameters and display the image and description
+const params = new URLSearchParams(window.location.search);
+const imageSrc = params.get('image');
+const description = params.get('description');
+
+const outputDiv = document.getElementById('output');
+const copyrightDiv = document.getElementById('copyright');
+
+if (imageSrc && description) {
+  outputDiv.innerHTML = `<img src="${imageSrc}" alt="Uploaded Image">`;
+  copyrightDiv.textContent = description;
+}
+    </script>
       
     
 </body>

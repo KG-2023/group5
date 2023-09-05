@@ -95,7 +95,7 @@
                   <div class="col-4 main-container-col">
                       <div class="row">
                           <div class="col font-design-main main-container-div">
-                              <a href="">My Logs</a>
+                              <a href="/index.html">My Journal</a>
                           </div>
                           <div class="col font-design-main main-container-div">
                               <a href="/every-html/new-log.html">New log</a>
@@ -119,31 +119,36 @@
 
 
         <div class="container-fluid section-div">
-        <div class="row">
-            <div class="col-4 pt-4" style="background-color: #fcdc85;">
-            </div>
-
-            <div class="col-4 main-section">
+          <div class="row">
+              <div class="col-4 background-light-yellow py-4"></div>
+      
+              <div class="col-4 main-section">
                 <article class="regular">
                     <h2>My Daily Log</h2>
-
-                    <form action="/every-html/my-log.html">
-                        <!-- <input type="text" id="txt" placeholder="Enter Username" size="1000" maxlength="1000" /> -->
-
-                        <textarea id="text" placeholder="Enter Username" rows="me-auto" cols="100">At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.</textarea>
-
-                        <input type="submit" id="btn1" value="Submit" onclick="passValue();"/>
-
+            
+                    <form id="logForm">
+                      <input type="file" id="myFileInput">
+                      <img id="imgPreview" src="" alt="Preview">
+                      <textarea id="imageDescription" rows="10" placeholder="Add a description"></textarea>
+                      <button type="submit">Post</button>
                     </form>
+                    
 
-                    <p class="output" id="output1"></p>
+                  
+
                 </article>
-
-            </div>        
-
-            <div class="col-4 pt-4" style="background-color: #85b5fc;" ></div>
-        </div>
-        </div>        
+            </div>
+            
+            
+      
+              <div class="col-4 background-light-blue py-4"></div>
+          </div>
+      </div>
+      
+      
+      
+      
+              
                                         
     </div>  
         
@@ -153,24 +158,24 @@
   </script>
     <script src="script.js"></script>
     <script src="/scriptFile/nyapi.js"></script>
-    <script>
-        // const txt1 = document.getElementById('tbuser');
-        // const btn1 = document.getElementById('btn1');
-        // const out1 = document.getElementById('output1');
+    <script src="/scriptFile/new-log.js"></script>
 
-        // function fun1(){
-        //     out1.innerHTML = txt1.value;
-        // }
 
-        function passValue(){
-            var text = document.getElementById('txt').value;
-            localStorage.setItem('textValue', text);
-            return false;
-        }
 
-        btn1.addEventListener('click', fun1);
+    
+  <script>
+    document.querySelector("#logForm").addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+    
+        const imageDataURL = localStorage.getItem('recent-image');
+        const imageDescription = localStorage.getItem('image-description');
+    
+        // Update the output section in index.html with the gathered data
+        const outputDiv = parent.document.querySelector("#output");
+        outputDiv.innerHTML = `<img src="${imageDataURL}" alt="Uploaded Image">
+                                <p>${imageDescription}</p>`;
+    });
     </script>
-      
     
 </body>
 </html>

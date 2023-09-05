@@ -21,15 +21,19 @@
     background-color: #7f7ff0;
 }
 
+/* #main-nav{
+background-color: colors;
+} */
+
 .nav-item{
     background-color: #7f7ff0;  
     text-decoration: none;
     text-shadow: none;
 }
 
-.nav-bar .nav-item .font-design-nav{
+/* .nav-bar .nav-item .font-design-nav{
     font-size: 2rem;  
-}
+} */
 .font-design-nav{
     font-size: 2rem;  
     background-color: #7f7ff0;  
@@ -39,12 +43,6 @@
 .font-design-nav .dropdown-menu li a{
     color: #7f7ff0;
 }
-
-/* .font-design-nav a{
-    font-size: 2rem;   
-    text-decoration: none; 
-    color: #fff;
-} */
 
 .nav-item .nav-link:hover{
     color: #fff;
